@@ -1,0 +1,4 @@
+EMBEDDING_MODEL_NAME = "text-embedding-ada-002"
+EMBEDDING_SIZE = 1536
+TODO_CHAIN_MODEL_NAME = "gpt-3.5-turbo"
+BABY_AGI_MODEL_NAME = "gpt-3.5-turbo"
