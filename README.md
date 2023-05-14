@@ -1,4 +1,4 @@
-## Overview
+# Overview
 
 The app creates an action plan to complete the user's tasks and searches Google for information to keep itself up to date.
 This is a BabyAGI + Google Search API tool that uses Langchain's framework hosted on Streamlit.
@@ -38,8 +38,8 @@ If streamlit is not working, checkout their [installation page](https://docs.str
 
 ### TODO
 
-- [ ] Need toimprove prompt inputs 
-- [ ] Need to format the output into code formats
+- [ ] Need to improve prompt formation
+- [ ] Need to format the output into relevant formats
 - [ ] Need to add AI Role dropdown
 - [ ] Need to add User Role dropdown
 - [ ] Need to add Task Type dropdown
