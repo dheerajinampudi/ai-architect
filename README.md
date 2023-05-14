@@ -15,7 +15,8 @@ Access app here: https://dheerajinampudi-ai-architect-streamlit-app-r3ui99.strea
 <img width="1728" alt="image" src="src/assets/example-screenshot/running_assistant_screenshot.png">
 
 ## Sample results GIF
-![]([https://github.com/Your_Repository_Name/Your_GIF_Name.gif](https://github.com/dheerajinampudi/ai-architect/blob/master/src/assets/example-screenshot/AutoGPT_results.gif))
+
+![](https://github.com/dheerajinampudi/ai-architect/blob/master/src/assets/example-screenshot/AutoGPT_results.gif)
 
 ## To run
 
