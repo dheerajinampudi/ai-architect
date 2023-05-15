@@ -21,7 +21,8 @@ st.caption('This AI tool use Langchain, OpenAI, Google search API and AutoGPT to
 #     os.environ["GOOGLE_API_KEY"] = config('GOOGLE_API_KEY')
 #     os.environ["google_cse_id"] = config('google_cse_id')
 
-st.sidebar.title("Enter Your API Keys 🗝️")
+st.sidebar.title("Configuration")
+st.sidebar.subheader("Enter Your API Keys 🗝️")
 #OPEN API KEY
 open_api_key = st.sidebar.text_input(
     "Open API Key", 
@@ -52,6 +53,16 @@ st.session_state['open_api_key'] = open_api_key
 st.session_state['google_api_key'] = google_api_key
 st.session_state['google_cse_id'] = google_cse_id
 
+st.sidebar.divider()  # 👈 Draws a horizontal rule
+
+#selecting the intensity of the results #### NEW CHANGES (NOT YET USED in the model)
+st.sidebar.subheader("Set your temperature (Experimental)")
+st.sidebar.markdown("For transformation tasks (extraction, standardization, format conversion, grammar fixes) prefer a temperature of 0 - 0.3.")
+st.sidebar.markdown("For writing tasks, you should use the temperature higher, closer to 0.5. ")
+st.sidebar.markdown("If you want GPT to be highly creative, consider values between 0.7 - 1.")
+temperature = st.sidebar.slider('What is the model temperature?', min_value =0.0, max_value=1.0, value= 0.1,step=0.1)
+
+st.sidebar.divider()  # 👈 Draws a horizontal rule
 #Advanced Settings
 with st.sidebar.expander('Advanced Settings ⚙️', expanded=False):
     st.subheader('Advanced Settings ⚙️')
