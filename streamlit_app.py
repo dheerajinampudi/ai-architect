@@ -53,7 +53,7 @@ st.session_state['open_api_key'] = open_api_key
 st.session_state['google_api_key'] = google_api_key
 st.session_state['google_cse_id'] = google_cse_id
 
-st.sidebar.divider()  # 👈 Draws a horizontal rule
+#st.sidebar.divider()  # 👈 Draws a horizontal rule
 
 #selecting the intensity of the results #### NEW CHANGES (NOT YET USED in the model)
 st.sidebar.subheader("Set your temperature (Experimental)")
@@ -62,7 +62,7 @@ st.sidebar.markdown("For writing tasks, you should use the temperature higher, c
 st.sidebar.markdown("If you want GPT to be highly creative, consider values between 0.7 - 1.")
 temperature = st.sidebar.slider('What is the model temperature?', min_value =0.0, max_value=1.0, value= 0.1,step=0.1)
 
-st.sidebar.divider()  # 👈 Draws a horizontal rule
+#st.sidebar.divider()  # 👈 Draws a horizontal rule
 #Advanced Settings
 with st.sidebar.expander('Advanced Settings ⚙️', expanded=False):
     st.subheader('Advanced Settings ⚙️')
@@ -84,8 +84,16 @@ with st.sidebar.expander('Advanced Settings ⚙️', expanded=False):
 #     key="input"
 # )
 col1, col2 = st.columns(2)
-assistant_role_name = col1.text_input("AI Assistant Role Name", "Solutions Architect")
-user_role_name = col2.text_input("User Role Name", "CTO")
+## Assistant ROLE types
+assistant_role_name = col1.selectbox('What is the AI Assistant Role Name?',
+    ('Solutions Architect', 'Python Developer', 'DynamoDB Expert'))
+#st.write('You selected:', assistant_role_name)
+
+## User ROLE
+user_role_name = col2.selectbox('What is the User Role Name?',
+    ('CTO', 'Product Manager', 'Engineering Manager'))
+
+## Question area with sample
 task = st.text_area("Task", "Develop a SAM template to deploy an Amazon API Gateway HTTP API with a Lambda integration.")
 word_limit = st.number_input("Word Limit", 10, 1500, 100)
 task_specifier_prompt = f"""Here is a task that {assistant_role_name} will help {user_role_name} to complete: {task}.

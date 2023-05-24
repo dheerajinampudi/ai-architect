@@ -5,7 +5,7 @@ from langchain.vectorstores import FAISS
 from langchain.docstore import InMemoryDocstore
 from src.baby_agi import BabyAGI
 from langchain.agents import ZeroShotAgent, Tool
-from langchain import OpenAI, SerpAPIWrapper, LLMChain
+from langchain import OpenAI, LLMChain
 from langchain.utilities import GoogleSearchAPIWrapper
 from constants import (
     EMBEDDING_MODEL_NAME,
