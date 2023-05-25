@@ -6,6 +6,7 @@ class TaskCreationChain(LLMChain):
     """Chain to generates tasks."""
 
     @classmethod
+    # Need a persona based prompts. Talking to the AWS experts on this
     def from_llm(cls, llm: BaseLLM, verbose: bool = True) -> LLMChain:
         """Get the response parser."""
         task_creation_template = (

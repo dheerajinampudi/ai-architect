@@ -47,11 +47,15 @@ If streamlit is not working, checkout their [installation page](https://docs.str
 
 ### TODO
 
-- [ ] Need to improve prompt formation
+- [ ] Need to improve prompt formation and write persona based prompts
 - [ ] Need to format the output into relevant formats
 - [ ] Need to add AI Role dropdown
 - [ ] Need to add User Role dropdown
 - [ ] Need to add Task Type dropdown
+- [ ] Connect to external knowledge base to pull the templates (serverlessland.com, etc)
+- [ ] Give option to use Hugging face instead of openAI to the user
+- [ ] Give an option to select the temperature of the OpenAI model (UI added)
+- [ ] Give an option to let the user select model type to be used
 
 ---
 ### Inspired by
